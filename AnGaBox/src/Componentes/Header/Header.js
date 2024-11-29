@@ -4,8 +4,6 @@ import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 
 
-const imgUser = 'https://i.pinimg.com/564x/13/12/d2/1312d287e7de2dde6a6ccb8f4e3ddcd3.jpg'
-
 export default function Header(props) {
     const navigation = useNavigation();
     const {user} = props;

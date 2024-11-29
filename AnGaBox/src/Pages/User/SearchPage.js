@@ -30,7 +30,7 @@ export default function SearchPage() {
   // Função para buscar os filmes pela API
   const fetchMovies = async () => {
     try {
-      const response = await axios.get("http://10.92.198.32:8080/api/movies"); // Substitua pela URL correta da sua API
+      const response = await axios.get("http://10.92.198.32:8080/api/movie"); // Substitua pela URL correta da sua API
       setMovies(response.data.movies); // Certifique-se de que o endpoint retorna um array no campo `movies`
     } catch (error) {
       console.error("Erro ao buscar os filmes:", error.message);

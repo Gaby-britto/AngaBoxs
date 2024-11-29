@@ -38,7 +38,7 @@ export default function Home() {
     if (id) {
       listUser();
     } else {
-      console.warn("ID do usuário não fornecido.");
+      console.log("ID do usuário não fornecido.");
     }
   }, [id]);
 
@@ -84,7 +84,7 @@ export default function Home() {
           <CardVideo key={index} />
         ))}
       </ScrollView>
-      <Footer id={id} />
+      <Footer id={id} nameUser={nameUser} />
     </View>
   );
 }

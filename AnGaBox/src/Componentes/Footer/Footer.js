@@ -3,7 +3,7 @@ import { StyleSheet, TouchableOpacity, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 
-export default function Footer({ id }) {
+export default function Footer({ id}, {nameUser}) {
   const navigation = useNavigation();
   const navigateTo = (screen, params = {}) => {
     if (screen === 'User' && !id) {
@@ -24,7 +24,7 @@ export default function Footer({ id }) {
       </TouchableOpacity>
       <TouchableOpacity
         style={styles.iconButton}
-        onPress={() => navigateTo('Search', { id })}
+        onPress={() => navigateTo('Search', { id }, {nameUser})}
       >
         <Ionicons name="film-outline" size={30} color="gray" />
       </TouchableOpacity>

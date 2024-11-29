@@ -26,6 +26,7 @@ export default function Review() {
   const navigation = useNavigation();
   const { id, nameUser } = route.params || {};
 
+  
   // Estados para armazenar informações do formulário e do filme
   const [movie, setMovie] = useState(null);
   const [title, setTitle] = useState("");
@@ -78,7 +79,7 @@ export default function Review() {
   const handleReviewSubmit = async () => {
     try {
       const response = await axios.post(
-        `http://localhost:8080/api/post/${id}`,
+        `http://10.92.198.32:8080/api/post/${id}`,
         {
           title,
           content,
@@ -151,6 +152,7 @@ export default function Review() {
         <View style={styles.containerButton}>
           <MyButton
             title="Submit Review"
+            onPress={handleReviewSubmit}
           />
         </View>
         <CardReview />

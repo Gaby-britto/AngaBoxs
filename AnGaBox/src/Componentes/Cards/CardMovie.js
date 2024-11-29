@@ -11,7 +11,7 @@ export default function CardMovie() {
   const [loading, setLoading] = useState(true);
   const listMovies = async () => {
     try {
-      // Faz uma requisição GET à API para obter os filmes
+      
       const response = await axios.get("http://10.92.198.32:8080/api/movie");
       setMovies(response.data.movies);
       setLoading(false);
@@ -21,7 +21,6 @@ export default function CardMovie() {
     }
   };
 
-  // useEffect para executar a função listMovies quando o componente for montado
   useEffect(() => {
     listMovies();
   }, []);
